@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const animations = css`
   @keyframes toRight {
@@ -39,7 +39,7 @@ export const animations = css`
 
   @keyframes scale {
     from {
-      transform: scale(0);
+      transform: scale(0.5);
     }
     to {
       transform: scale(1);

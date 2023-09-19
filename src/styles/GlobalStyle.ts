@@ -22,7 +22,7 @@ p {
   margin: 0;
 }
 
-p {font-family: var(--secondaryFont)}
+p {font-family: var(--secondaryFont);}
 
 ul,
 ol {
@@ -37,5 +37,6 @@ img {
   height: auto;
 }
 
-a{text-decoration:none;}
+a, span {text-decoration:none;
+font-family: var(--secondaryFont);}
 `;

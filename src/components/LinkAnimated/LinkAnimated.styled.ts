@@ -17,20 +17,19 @@ export const LinkAnimatedStyled = styled.a<{ dark?: boolean }>`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     text-align: center;
-    color: ${(props) => (props.dark ? "#fff" : "#23212a")};
     font-family: var(--secondaryFont);
-    font-size: 16px;
-    font-style: normal;
     font-weight: 600;
     line-height: 1.35;
+    color: ${(props) => (props.dark ? "#fff" : "#23212a")};
   }
 
   div {
     position: absolute;
-    transform: translate(150px, 16px);
     width: 120px;
     height: 120px;
+    transform: translate(150px, 16px);
     border-radius: 50%;
     background-color: ${(props) =>
       props.dark ? "var(--secondaryDark)" : "white"};

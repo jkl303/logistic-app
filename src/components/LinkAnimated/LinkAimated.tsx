@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { LinkAnimatedStyled } from "./LinkAnimated.styled";
 
 interface LinkProps {
@@ -6,7 +7,7 @@ interface LinkProps {
   dark?: boolean;
 }
 
-export const LinkAnimated: React.FC<LinkProps> = ({ href, title, dark }) => {
+export const LinkAnimated: FC<LinkProps> = ({ href, title, dark }) => {
   return (
     <LinkAnimatedStyled href={href} dark={dark}>
       <span>{title}</span>
