@@ -34,7 +34,6 @@ ol {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 a, span {text-decoration:none;

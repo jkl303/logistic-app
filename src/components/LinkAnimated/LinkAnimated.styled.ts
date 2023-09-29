@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-export const LinkAnimatedStyled = styled.a<{ dark?: boolean }>`
+export const LinkAnimatedStyled = styled.a<{
+  dark?: boolean;
+  center?: boolean;
+}>`
   display: block;
   position: relative;
   overflow: hidden;
   width: 194px;
   height: 60px;
   border: none;
+  ${(props) =>
+    props.center &&
+    "margin-left: auto; margin-right: auto;"};
   background: ${(props) =>
     props.dark ? "var(--primaryDark)" : "var(--gradient)"};
 

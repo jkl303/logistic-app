@@ -16,8 +16,19 @@ import {
   UpperFooterWrapper,
 } from "./Footer.styled";
 import { ContainerStyled } from "../../styles/Container.styled";
+import { useState } from "react";
 
 export const Footer = () => {
+  const [submitted, setSubmitted] =
+    useState<boolean>(false);
+
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement>,
+  ) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <FooterStyled>
       <UpperFooterWrapper>
@@ -35,24 +46,28 @@ export const Footer = () => {
       </UpperFooterWrapper>
       <ContainerStyled>
         <MidFooterStyled>
-          <FooterContactsStyled>
+          <FooterContactsStyled data-aos="fade-right">
             <p>
-              Leverage agile frameworks to provide a robust synopsis for
-              strategy collaborative thinking to further the overall value
-              proposition.
+              Leverage agile frameworks to provide a robust
+              synopsis for strategy collaborative thinking
+              to further the overall value proposition.
             </p>
             <div>
               <LetterIcon />
               <div>
                 <p>Email</p>
-                <a href="mailto:contact@logistics.com">contact@logistics.com</a>
+                <a href="mailto:contact@logistics.com">
+                  contact@logistics.com
+                </a>
               </div>
             </div>
             <div>
               <PhoneIcon />
               <div>
                 <p>Call Us</p>
-                <a href="tel:00112365489">(00) 112 365 489</a>
+                <a href="tel:00112365489">
+                  (00) 112 365 489
+                </a>
               </div>
             </div>
           </FooterContactsStyled>
@@ -75,13 +90,17 @@ export const Footer = () => {
             </li>
           </FooterPagesStyled>
 
-          <FooterFormStyled>
+          <FooterFormStyled
+            onSubmit={handleSubmit}
+            data-aos="fade-left">
             <input
-              type="text"
+              type="email"
               placeholder="Email here*"
               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
             />
-            <ButtonStyled type="submit">Send Now</ButtonStyled>
+            <ButtonStyled type="submit">
+              {submitted ? "Submited" : "Send Now"}
+            </ButtonStyled>
             <ul>
               <li>
                 <a href="https://www.linkedin.com/in/vladyslav-zoz-15a8ba1a8/">
@@ -105,8 +124,8 @@ export const Footer = () => {
       <LowerFooterStyled>
         <ContainerStyled>
           <p>
-            Copyright © TransitFlow | Designed by VictorFlow - Powered by
-            Webflow.
+            Copyright © TransitFlow | Designed by VictorFlow
+            - Powered by Webflow.
           </p>
         </ContainerStyled>
       </LowerFooterStyled>

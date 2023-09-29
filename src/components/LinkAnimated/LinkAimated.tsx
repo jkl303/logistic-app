@@ -5,11 +5,20 @@ interface LinkProps {
   href: string;
   title: string;
   dark?: boolean;
+  center?: boolean;
 }
 
-export const LinkAnimated: FC<LinkProps> = ({ href, title, dark }) => {
+export const LinkAnimated: FC<LinkProps> = ({
+  href,
+  title,
+  dark,
+  center,
+}) => {
   return (
-    <LinkAnimatedStyled href={href} dark={dark}>
+    <LinkAnimatedStyled
+      href={href}
+      dark={dark}
+      center={center}>
       <span>{title}</span>
       <div />
     </LinkAnimatedStyled>
