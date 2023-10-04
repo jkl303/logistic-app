@@ -66,7 +66,7 @@ export const FooterPagesStyled = styled.ul`
   flex-direction: column;
 
   a {
-    font-family: Krub;
+    font-family: var(--secondaryFont);
     line-height: 2.5;
     color: #fff;
   }

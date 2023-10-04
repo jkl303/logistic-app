@@ -47,12 +47,15 @@ export const NavLinkStyled = styled(NavLink)`
   }
 `;
 
-export const PagesStyled = styled.div<{ isShowPages: boolean }>`
+export const PagesStyled = styled.div<{
+  isShowPages: boolean;
+}>`
   display: inline-block;
   position: relative;
 
   span {
     padding: 26px 0;
+
     :hover {
       cursor: pointer;
     }
@@ -60,7 +63,9 @@ export const PagesStyled = styled.div<{ isShowPages: boolean }>`
 
   svg {
     margin-left: 5px;
-    transform: rotate(${({ isShowPages }) => (isShowPages ? "180deg" : "0")});
+    transform: rotate(
+      ${({ isShowPages }) => (isShowPages ? "180deg" : "0")}
+    );
     transition: transform 250ms linear;
   }
 

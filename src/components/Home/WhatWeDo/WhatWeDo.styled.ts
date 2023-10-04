@@ -20,19 +20,29 @@ export const ServicesStyled = styled.ul`
 
   li {
     display: flex;
-    animation: scale 300ms ease;
+    align-items: flex-start;
 
     div {
       position: relative;
       margin-left: 40px;
       max-width: 277px;
 
-      h3 {
-        margin-bottom: 13px;
+      a {
+        transition: color 250ms ease;
 
+        font-family: var(--primaryFont);
         font-size: 25px;
         font-weight: 400;
         color: var(--title);
+
+        :hover,
+        :focus {
+          color: var(--primaryYellow);
+        }
+      }
+
+      p {
+        margin-top: 13px;
       }
 
       ::before {
@@ -40,7 +50,7 @@ export const ServicesStyled = styled.ul`
         position: absolute;
         left: -25px;
         width: 1px;
-        height: 105px;
+        height: 110px;
         background-color: #d8d8d8;
       }
     }

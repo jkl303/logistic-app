@@ -30,7 +30,17 @@ export const ContactsStyled = styled.ul`
         font-size: 14px;
         line-height: 1.5;
         font-weight: 500;
-        color: white;
+        color: #fff;
+      }
+
+      a {
+        transition: color 250ms ease;
+        font-family: var(--secondaryFont);
+
+        :hover,
+        :focus {
+          color: var(--primaryYellow);
+        }
       }
     }
   }

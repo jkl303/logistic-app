@@ -37,5 +37,5 @@ img {
 }
 
 a, span {text-decoration:none;
-font-family: var(--secondaryFont);}
+font-family: var(--primaryFont);}
 `;

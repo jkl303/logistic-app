@@ -3,15 +3,16 @@ import work from "../../../images/HomePage/work.jpg";
 import truck from "../../../images/HomePage/truck.jpg";
 import cargoAbove from "../../../images/HomePage/cargoAbove.jpg";
 import shipGrimal from "../../../images/HomePage/shipGrimal.jpg";
+
+import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { ContainerStyled } from "../../../styles/Container.styled";
+import { LinkAnimated } from "../../common/LinkAnimated/LinkAimated";
 import {
   BGStyled,
   ImgList,
   ImgTextStyled,
   WorkImgsStyled,
 } from "./WorkImgs.styled";
-import { LinkAnimated } from "../../LinkAnimated/LinkAimated";
-import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 
 export const WorkImgs = () => {
   return (

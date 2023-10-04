@@ -1,4 +1,4 @@
-import { LinkAnimated } from "../../LinkAnimated/LinkAimated";
+import { LinkAnimated } from "../../common/LinkAnimated/LinkAimated";
 import { ContainerStyled } from "../../../styles/Container.styled";
 import {
   HeroHomeContentStyled,

@@ -72,7 +72,6 @@ export const DateStyled = styled.div`
   align-items: center;
 
   span {
-    font-family: Rubik;
     font-size: 40px;
     font-weight: 600;
     color: var(--title);

@@ -12,6 +12,7 @@ import {
   TeamStyled,
   TeamTitleStyled,
 } from "./Team.styled";
+import { Companies } from "../Companies/Companies";
 
 export const Team = () => {
   return (

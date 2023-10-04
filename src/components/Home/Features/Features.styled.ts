@@ -36,7 +36,6 @@ export const FeaturesIMGWrapper = styled.div`
     p {
       width: 260px;
 
-      font-family: Rubik;
       font-size: 25px;
       color: var(--title);
     }

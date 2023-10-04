@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { ReactSVG } from "react-svg";
-import { companies } from "../../../data/companies";
 
 import { ReactComponent as ClockIcon } from "../../../icons/common/clockDark.svg";
 import { ReactComponent as LetterIcon } from "../../../icons/common/letter.svg";
@@ -11,7 +9,6 @@ import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { SpanStyled } from "../../../styles/Span.styled";
 import { TextStyled } from "../../../styles/Text.styled";
 import {
-  CompaniesListStyled,
   ContactContentStyled,
   ContactFormStyled,
   ContactStyled,
@@ -20,6 +17,7 @@ import {
   SubmitMessageStyled,
 } from "./Contact.styled";
 import { ButtonStyled } from "../../../styles/Button.styled";
+import { Companies } from "../../common/Companies/Companies";
 
 export const Contact = () => {
   const [submitted, setSubmitted] =
@@ -109,25 +107,7 @@ export const Contact = () => {
             </SubmitMessageStyled>
           )}
         </ContactContentStyled>
-        <CompaniesListStyled>
-          {companies.map(({ name, img }) => {
-            return (
-              <li key={name} data-aos="flip-right">
-                <img
-                  src={img}
-                  alt={name}
-                  width="300px"
-                  height="234px"
-                />
-                <div>
-                  <ReactSVG
-                    src={require(`../../../icons/companies/${name}.svg`)}
-                  />
-                </div>
-              </li>
-            );
-          })}
-        </CompaniesListStyled>
+        <Companies dark />
       </ContainerStyled>
     </ContactStyled>
   );

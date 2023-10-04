@@ -72,7 +72,6 @@ export const StatsStyled = styled.ul`
     }
 
     span {
-      font-family: Rubik;
       font-size: 50px;
       font-weight: 600;
     }

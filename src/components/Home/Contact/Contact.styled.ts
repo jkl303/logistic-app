@@ -46,6 +46,7 @@ export const IconsListStyled = styled.ul`
 
 export const ContactFormStyled = styled.form`
   display: flex;
+  position: relative;
   padding-top: 42px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -96,39 +97,15 @@ export const ContactFormStyled = styled.form`
   }
 `;
 
-export const SubmitMessageStyled = styled.p``;
+export const SubmitMessageStyled = styled.p`
+  width: 100%;
+  height: 70px;
+  padding: 20px 30px;
+  border: 3px solid var(--primaryYellow);
+  background-color: #fff;
 
-export const CompaniesListStyled = styled.ul`
-  display: flex;
-
-  li {
-    position: relative;
-    border: 1px solid var(--text);
-    background-color: var(--primaryDark);
-
-    img {
-      opacity: 0;
-      transition: opacity 250ms ease;
-    }
-
-    :hover {
-      img {
-        opacity: 1;
-      }
-    }
-
-    div {
-      position: absolute;
-      display: flex;
-      top: 0;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        transparent 0%,
-        #09124280 100%
-      );
-    }
-  }
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
 `;

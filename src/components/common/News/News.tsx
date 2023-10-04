@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { news } from "../../data/news";
+import { news } from "../../../data/news";
 
-import { ReactComponent as CalendarIcon } from "../../icons/common/calendar.svg";
+import { ReactComponent as CalendarIcon } from "../../../icons/common/calendar.svg";
 
-import { ContainerStyled } from "../../styles/Container.styled";
-import { SectionTitleStyled } from "../../styles/SectionTitle.styled";
-import { SpanStyled } from "../../styles/Span.styled";
+import { ContainerStyled } from "../../../styles/Container.styled";
+import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
+import { SpanStyled } from "../../../styles/Span.styled";
 import {
   NewsStyled,
   NewsTitleStyled,
@@ -36,6 +36,7 @@ export const News = () => {
                 <ImgLinkStyled to="/post/how-technology-can-help-redraw-the-supply-chain-map">
                   <img
                     src={img}
+                    alt={title}
                     width="456px"
                     height="310px"
                   />

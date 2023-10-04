@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { ContainerStyled } from "../../styles/Container.styled";
+import { ContainerStyled } from "../../../styles/Container.styled";
 import {
   HeroContentStyled,
   HeroStyled,
 } from "./Hero.styled";
-import { SpanStyled } from "../../styles/Span.styled";
+import { SpanStyled } from "../../../styles/Span.styled";
 
 interface HeroProps {
   text: string;
