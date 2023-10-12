@@ -1,8 +1,12 @@
+import { FC } from "react";
+
 import { team } from "../../../data/team";
+
 import { ReactComponent as InstIcon } from "../../../icons/socials/instagtam.svg";
 import { ReactComponent as TwitterIcon } from "../../../icons/socials/twitter.svg";
 import { ReactComponent as FBIcon } from "../../../icons/socials/facebook.svg";
 import { ReactComponent as InIcon } from "../../../icons/socials/in.svg";
+
 import { ContainerStyled } from "../../../styles/Container.styled";
 import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { SpanStyled } from "../../../styles/Span.styled";
@@ -12,9 +16,10 @@ import {
   TeamStyled,
   TeamTitleStyled,
 } from "./Team.styled";
-import { Companies } from "../Companies/Companies";
 
-export const Team = () => {
+export const Team: FC<{ all?: boolean }> = ({ all }) => {
+  const allOrNot = all ? 6 : 3;
+
   return (
     <TeamStyled>
       <ContainerStyled>
@@ -26,7 +31,7 @@ export const Team = () => {
         </TeamTitleStyled>
         <TeamListStyled>
           {team
-            .slice(0, 3)
+            .slice(0, allOrNot)
             .map(({ name, jobTitle, photo, socials }) => {
               return (
                 <li key={name}>

@@ -1,5 +1,20 @@
+import { Companies } from "../../components/common/Companies/Companies";
+import { FAQ } from "../../components/common/FAQ/FAQ";
+import { Hero } from "../../components/common/Hero/Hero";
+import heroContact from "../../images/others/heroContact.jpg";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <>
+      <Hero
+        text="Contact"
+        title="Contact Us"
+        img={heroContact}
+      />
+      <Companies />
+      <FAQ />
+    </>
+  );
 };
 
 export default Contact;

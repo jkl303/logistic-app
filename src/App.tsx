@@ -26,12 +26,14 @@ const Blog = lazy(() => import("./pages/Blog/Blog"));
 const BlogSingle = lazy(
   () => import("./pages/BlogSingle/BlogSingle"),
 );
-const Team = lazy(() => import("./pages/Team/Team"));
+const Team = lazy(
+  () => import("./pages/TeamPage/TeamPage"),
+);
 const Contact = lazy(
   () => import("./pages/Contact/Contact"),
 );
 const Pricing = lazy(
-  () => import("./pages/Pricing/Pricing"),
+  () => import("./pages/PricingPage/PricingPage"),
 );
 const NotFound = lazy(() => import("./pages/404/404"));
 

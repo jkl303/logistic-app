@@ -1,29 +1,24 @@
 import styled from "styled-components";
+import truckAbout from "../../images/AboutPage/truckAbout.jpg";
 
 export const OverviewStyled = styled.section`
-  padding: 100px 0;
+  padding: 150px 0;
+  background-image: url(${truckAbout});
+  background-position: 78px;
+  background-repeat: no-repeat;
 `;
 
-export const OverviewContentStyled = styled.div`
-  display: flex;
-  gap: 130px;
-`;
-
-export const ImgsStyled = styled.div`
-  position: relative;
+export const FrontImgStyled = styled.div`
+  position: absolute;
+  bottom: -70px;
+  left: 220px;
+  padding: 28px 0 0 28px;
   background-color: #fff;
-
-  div {
-    position: absolute;
-    bottom: -72px;
-    right: -68px;
-    padding: 28px;
-    background-color: #fff;
-  }
 `;
 
 export const OverviewTextStyled = styled.div`
   width: 620px;
+  margin-left: auto;
 
   h2 {
     margin: 15px 0 12px;

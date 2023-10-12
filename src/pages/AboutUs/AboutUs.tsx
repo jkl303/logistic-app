@@ -1,5 +1,5 @@
 import { Overview } from "../../components/AboutPage/Overview";
-import { Services } from "../../components/common/Services/Services";
+import { ServicesList } from "../../components/common/Services/ServicesList";
 import { Companies } from "../../components/common/Companies/Companies";
 import { Hero } from "../../components/common/Hero/Hero";
 import { Reviews } from "../../components/common/Reviews/Reviews";
@@ -18,7 +18,7 @@ const AboutUs = () => {
         img={heroAbout}
       />
       <Overview />
-      <Services />
+      <ServicesList />
       <Team />
       <Reviews />
       <Pricing />

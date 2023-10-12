@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
-export const ReviewsStyled = styled.div`
+export const ReviewsStyled = styled.section<{
+  darkBG?: boolean;
+}>`
   padding: 100px 0;
-  overflow: hidden;
+  background-color: ${(props) =>
+    props.darkBG ? "var(--secondary)" : "#fff"};
+
+  > div {
+    overflow: hidden;
+  }
 `;
 
 export const ReviewsUpperStyled = styled.div`

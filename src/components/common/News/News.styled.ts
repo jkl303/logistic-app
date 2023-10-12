@@ -15,6 +15,9 @@ export const NewsTitleStyled = styled.div`
 `;
 
 export const NewsListStyled = styled.ul`
+  max-width: 948px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 39px;
 
   > li {

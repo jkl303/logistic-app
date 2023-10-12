@@ -1,3 +1,4 @@
+import { stats } from "../../../data/stats";
 import { ReactComponent as BoxIcon } from "../../../icons/yellow/box.svg";
 import { ReactComponent as MoneyIcon } from "../../../icons/yellow/money.svg";
 import planeHalf from "../../../images/HomePage/planeHalf.jpg";
@@ -66,16 +67,15 @@ export const About = () => {
             loading="lazy"
           />
           <StatsStyled>
-            <li>
-              <span>1294</span>
-              <CubeYellowStyled />
-              <p>Delivered Packages</p>
-            </li>
-            <li>
-              <span>3594</span>
-              <CubeYellowStyled />
-              <p>Satisfied Clients</p>
-            </li>
+            {stats.slice(1, 3).map(({ number, text }) => {
+              return (
+                <li key={number}>
+                  <span>{number}</span>
+                  <CubeYellowStyled />
+                  <p>{text}</p>
+                </li>
+              );
+            })}
           </StatsStyled>
         </AboutContentStyled>
       </ContainerStyled>

@@ -16,6 +16,8 @@ export const TeamTitleStyled = styled.div`
 export const TeamListStyled = styled.ul`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
 
   > li {
     position: relative;

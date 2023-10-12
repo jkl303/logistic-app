@@ -12,7 +12,7 @@ import { TextStyled } from "../../../styles/Text.styled";
 import { ContainerStyled } from "../../../styles/Container.styled";
 import { LinkAnimated } from "../LinkAnimated/LinkAimated";
 
-export const Services = () => {
+export const ServicesList = () => {
   return (
     <ServicesStyled>
       <ContainerStyled>
