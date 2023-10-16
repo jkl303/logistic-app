@@ -1,45 +1,42 @@
 import styled from "styled-components";
 
-export const ContactStyled = styled.section`
-  padding: 143px 0;
-  background-color: var(--primaryDark);
-`;
+export const ContactFormSectionStyled = styled.section`
+  padding-bottom: 50px;
 
-export const ContactContentStyled = styled.div`
-  display: flex;
-  margin-bottom: 70px;
-  justify-content: space-between;
-`;
+  > div {
+    padding: 100px;
+    text-align: center;
+    background-color: var(--primaryDark);
 
-export const ContactTextStyled = styled.div`
-  width: 353px;
+    h2 {
+      margin: 12px 0 3px;
+    }
 
-  h2 {
-    margin: 13px 0 3px;
+    > p {
+      padding: 0 16px;
+    }
   }
 `;
 
 export const IconsListStyled = styled.ul`
   display: flex;
-  margin-top: 32px;
-  flex-direction: column;
-  gap: 30px;
+  margin: 40px 22px;
+  justify-content: space-between;
 
   li {
     display: flex;
+    max-width: 160px;
+    flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 11px;
 
-    > div {
-      max-width: 176px;
-
-      p,
-      a {
-        font-size: 14px;
-        line-height: 1.5;
-        font-weight: 500;
-        color: white;
-      }
+    p,
+    a {
+      font-family: var(--secondaryFont);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 500;
+      color: white;
     }
   }
 `;
@@ -47,17 +44,15 @@ export const IconsListStyled = styled.ul`
 export const ContactFormStyled = styled.form`
   display: flex;
   position: relative;
-  padding-top: 42px;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 30px;
-  width: 758px;
 
   input {
     width: 365px;
     height: 60px;
     padding: 0 30px;
-    border: 1px solid #4e5683;
+    border: 1px solid #e0e0e0;
     background-color: transparent;
 
     font-size: 20px;
@@ -78,7 +73,7 @@ export const ContactFormStyled = styled.form`
     width: 100%;
     height: 154px;
     padding: 21px 24px;
-    border: 1px solid #4e5683;
+    border: 1px solid #e0e0e0;
     background-color: transparent;
     resize: none;
 
@@ -94,6 +89,11 @@ export const ContactFormStyled = styled.form`
       border-color: var(--primaryYellow);
       outline: none;
     }
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 

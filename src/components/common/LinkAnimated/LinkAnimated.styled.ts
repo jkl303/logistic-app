@@ -23,7 +23,7 @@ export const LinkAnimatedStyled = styled.a<LinkStylesProps>`
 
   span {
     position: absolute;
-    min-width: 100px;
+    width: 100%;
     z-index: 1;
     top: 50%;
     left: 50%;
@@ -39,8 +39,8 @@ export const LinkAnimatedStyled = styled.a<LinkStylesProps>`
 
   div {
     position: absolute;
-    width: ${(props) => (props.width ? 60 : "150")}px;
-    height: ${(props) => (props.width ? 60 : "150")}px;
+    width: ${(props) => (props.width ? "60" : "150")}px;
+    height: ${(props) => (props.width ? "60" : "150")}px;
     transform: translate(
       ${(props) =>
         props.width ? "115px, 32px" : "150px , 16px"}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import cargo from "../../../images/HomePage/cargo.jpg";
 
 export const AboutStyled = styled.section`
-  padding-top: 366px;
+  padding: 366px 0 0;
   background-image: url(${cargo});
   background-size: contain;
   background-repeat: no-repeat;

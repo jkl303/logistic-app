@@ -1,3 +1,4 @@
+import { WhyChooseUs } from "../../components/WhyChooseUs/WhyChooseUs";
 import { Companies } from "../../components/common/Companies/Companies";
 import { Hero } from "../../components/common/Hero/Hero";
 import { Team } from "../../components/common/Team/Team";
@@ -8,6 +9,7 @@ const TeamPage = () => {
     <>
       <Hero text="Team" title="Our Team" img={heroTeam} />
       <Team all />
+      <WhyChooseUs />
       <Companies />
     </>
   );

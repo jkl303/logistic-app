@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StatsStyled = styled.section`
+  padding: 0;
+
   ul {
     display: flex;
     width: 100%;

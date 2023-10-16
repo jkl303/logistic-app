@@ -12,6 +12,8 @@ body {
   font-family: var(--primaryFont);
 }
 
+section {padding: 100px 0;}
+
 h1,
 h2,
 h3,

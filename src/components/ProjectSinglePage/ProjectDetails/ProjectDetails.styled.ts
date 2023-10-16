@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ProjectDetailsStyled = styled.section`
-  padding: 100px 0;
   background-color: var(--secondary);
 
   > div {

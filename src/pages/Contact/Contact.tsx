@@ -1,3 +1,4 @@
+import { ContactForm } from "../../components/ContactForm/ContactForm";
 import { Companies } from "../../components/common/Companies/Companies";
 import { FAQ } from "../../components/common/FAQ/FAQ";
 import { Hero } from "../../components/common/Hero/Hero";
@@ -11,6 +12,7 @@ const Contact = () => {
         title="Contact Us"
         img={heroContact}
       />
+      <ContactForm />
       <Companies />
       <FAQ />
     </>

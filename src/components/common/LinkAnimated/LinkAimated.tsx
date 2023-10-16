@@ -7,6 +7,7 @@ interface LinkProps {
   dark?: boolean;
   center?: boolean;
   width?: number;
+  nodiv?: boolean;
 }
 
 export const LinkAnimated: FC<LinkProps> = ({
@@ -15,6 +16,7 @@ export const LinkAnimated: FC<LinkProps> = ({
   dark,
   center,
   width,
+  nodiv,
 }) => {
   return (
     <LinkAnimatedStyled
@@ -23,7 +25,7 @@ export const LinkAnimated: FC<LinkProps> = ({
       center={center}
       width={width}>
       <span>{title}</span>
-      <div />
+      {!nodiv && <div />}
     </LinkAnimatedStyled>
   );
 };

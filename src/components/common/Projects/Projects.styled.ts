@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ProjectsStyled = styled.section`
-  padding: 100px 0;
-
   h2 {
     margin-bottom: 35px;
   }

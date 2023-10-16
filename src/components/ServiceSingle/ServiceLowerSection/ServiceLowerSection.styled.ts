@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ServiceLowerSectionStyled = styled.section`
-  padding: 100px 0;
-
   > div {
     display: flex;
     align-items: center;

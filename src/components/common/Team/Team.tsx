@@ -21,7 +21,7 @@ export const Team: FC<{ all?: boolean }> = ({ all }) => {
   const allOrNot = all ? 6 : 3;
 
   return (
-    <TeamStyled>
+    <TeamStyled all={all}>
       <ContainerStyled>
         <TeamTitleStyled>
           <SpanStyled>The Transporters</SpanStyled>

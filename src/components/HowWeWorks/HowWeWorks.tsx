@@ -7,7 +7,6 @@ import { TextStyled } from "../../styles/Text.styled";
 import {
   FrontImgStyled,
   GoodnessesListStyled,
-  HowWeWorksContentStyled,
   HowWeWorksStyled,
 } from "./HowWeWorks.styled";
 
@@ -19,7 +18,7 @@ export const HowWeWorks = () => {
         <SectionTitleStyled>
           How We Works
         </SectionTitleStyled>
-        <HowWeWorksContentStyled>
+        <div>
           <FrontImgStyled data-aos="fade-left">
             <img
               src={buildingServices}
@@ -45,7 +44,7 @@ export const HowWeWorks = () => {
               );
             })}
           </GoodnessesListStyled>
-        </HowWeWorksContentStyled>
+        </div>
       </ContainerStyled>
     </HowWeWorksStyled>
   );

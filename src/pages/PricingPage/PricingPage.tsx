@@ -7,8 +7,8 @@ const PricingPage = () => {
   return (
     <>
       <Hero
-        text="Gallery"
-        title="Our Project"
+        text="Pricing"
+        title="Our Best Price"
         img={heroPricing}
       />
       <Pricing />

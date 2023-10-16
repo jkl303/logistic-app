@@ -1,16 +1,23 @@
+import { useParams } from "react-router-dom";
 import { Hero } from "../../components/common/Hero/Hero";
 import { News } from "../../components/common/News/News";
 import heroBlog from "../../images/BlogPage/heroBlog.jpg";
 
 const Blog = () => {
+  const params = useParams();
+
   return (
     <>
       <Hero
-        text="Blog"
-        title="Our Latest News"
+        text={params.category ? "Category" : "Blog"}
+        title={
+          params.category
+            ? params.category
+            : "Our Latest News"
+        }
         img={heroBlog}
       />
-      <News all />
+      <News category={params.category} all />
     </>
   );
 };

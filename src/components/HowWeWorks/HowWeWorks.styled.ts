@@ -2,7 +2,7 @@ import styled from "styled-components";
 import loaderServices from "../../images/ServicesPage/loaderServices.jpg";
 
 export const HowWeWorksStyled = styled.section`
-  padding: 100px 0 150px;
+  padding-bottom: 150px;
   background-color: var(--secondary);
   background-image: url(${loaderServices});
   background-position: 210px 220px;
@@ -13,8 +13,6 @@ export const HowWeWorksStyled = styled.section`
     margin: 15px 0 35px;
   }
 `;
-
-export const HowWeWorksContentStyled = styled.div``;
 
 export const FrontImgStyled = styled.div`
   position: absolute;

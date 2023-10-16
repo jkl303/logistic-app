@@ -17,8 +17,17 @@ import {
 } from "./News.styled";
 import { LinkAnimated } from "../LinkAnimated/LinkAimated";
 
-export const News: FC<{ all?: boolean }> = ({ all }) => {
+export const News: FC<{
+  all?: boolean;
+  category?: string;
+}> = ({ all, category }) => {
   const allOrNot = all ? 5 : 3;
+
+  const visibleNews = category
+    ? news.filter((blog) => {
+        return blog.category === category;
+      })
+    : news;
 
   return (
     <NewsStyled>
@@ -30,7 +39,7 @@ export const News: FC<{ all?: boolean }> = ({ all }) => {
           </SectionTitleStyled>
         </NewsTitleStyled>
         <NewsListStyled>
-          {news
+          {visibleNews
             .slice(0, allOrNot)
             .map(({ title, img, date }) => {
               return (
@@ -38,7 +47,7 @@ export const News: FC<{ all?: boolean }> = ({ all }) => {
                   key={date}
                   data-aos="fade-left"
                   data-aos-delay="100">
-                  <ImgLinkStyled to="/post/how-technology-can-help-redraw-the-supply-chain-map">
+                  <ImgLinkStyled to={`/post/${title}`}>
                     <img
                       src={img}
                       alt={title}
@@ -83,12 +92,14 @@ export const News: FC<{ all?: boolean }> = ({ all }) => {
               );
             })}
         </NewsListStyled>
-        <LinkAnimated
-          href="/blog"
-          title="More Blog"
-          dark
-          center
-        />
+        {!all && (
+          <LinkAnimated
+            href="/blog"
+            title="More Blog"
+            dark
+            center
+          />
+        )}
       </ContainerStyled>
     </NewsStyled>
   );

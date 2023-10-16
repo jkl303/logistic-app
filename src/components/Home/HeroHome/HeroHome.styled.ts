@@ -2,6 +2,7 @@ import styled from "styled-components";
 import shipWide from "../../../images/HomePage/shipWide.jpg";
 
 export const HeroHomeStyled = styled.section`
+  padding: 0;
   background-color: var(--primaryDark);
   background-image: url(${shipWide});
   background-size: cover;

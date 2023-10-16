@@ -77,16 +77,16 @@ export const Footer = () => {
               <Link to="/about-us">About Us</Link>
             </li>
             <li>
-              <Link to="/about-us">Our Team</Link>
+              <Link to="/our-team">Our Team</Link>
             </li>
             <li>
-              <Link to="/about-us">Our Project</Link>
+              <Link to="/our-project">Our Project</Link>
             </li>
             <li>
-              <Link to="/about-us">Pricing</Link>
+              <Link to="/pricing">Pricing</Link>
             </li>
             <li>
-              <Link to="/about-us">Contact</Link>
+              <Link to="/contact-us">Contact</Link>
             </li>
           </FooterPagesStyled>
 

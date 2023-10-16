@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-export const TeamStyled = styled.section`
-  padding: 100px 0;
+export const TeamStyled = styled.section<{
+  all?: boolean;
+}>`
+  ${(props) =>
+    props.all && "background-color: var(--secondary);"}
 `;
 
 export const TeamTitleStyled = styled.div`

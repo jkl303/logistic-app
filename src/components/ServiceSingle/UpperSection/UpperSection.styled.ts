@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const UpperSectionStyled = styled.section`
-  padding: 100px 0;
-`;
+export const UpperSectionStyled = styled.section``;
 
 export const ServiceTitleStyled = styled.div`
   display: flex;

@@ -59,7 +59,10 @@ const App = () => {
             path="/project/:name"
             element={<ProjectSingle />}
           />
-          <Route path="/blog" element={<Blog />} />
+          <Route
+            path="/blog/:category?"
+            element={<Blog />}
+          />
           <Route
             path="/post/:title"
             element={<BlogSingle />}

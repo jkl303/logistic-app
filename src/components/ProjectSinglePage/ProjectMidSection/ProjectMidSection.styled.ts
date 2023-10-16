@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const ProjectMidSectionStyled = styled.section`
-  padding: 100px 0;
-`;
+export const ProjectMidSectionStyled = styled.section``;
 
 export const ProjectMidTextStyled = styled.div`
   > p {

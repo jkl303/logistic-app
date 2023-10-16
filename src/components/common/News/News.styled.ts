@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const NewsStyled = styled.section`
-  padding: 100px 0;
+  > div {
+    > a {
+      margin-top: 39px;
+    }
+  }
 `;
 
 export const NewsTitleStyled = styled.div`
@@ -18,7 +22,6 @@ export const NewsListStyled = styled.ul`
   max-width: 948px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 39px;
 
   > li {
     display: flex;

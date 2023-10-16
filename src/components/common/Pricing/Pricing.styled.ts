@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PricingStyled = styled.section`
-  padding: 100px 0;
   text-align: center;
 
   h2 {
