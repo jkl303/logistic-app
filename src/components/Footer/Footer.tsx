@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ReactComponent as LetterIcon } from "../../icons/common/letter.svg";
 import { ReactComponent as PhoneIcon } from "../../icons/common/phone.svg";
-import { ReactComponent as InIcon } from "../../icons/socials/inFooter.svg";
+import { ReactComponent as InIcon } from "../../icons/socials/linkedIn.svg";
 import { ReactComponent as TwitterIcon } from "../../icons/socials/twitter.svg";
 import { ReactComponent as FBIcon } from "../../icons/socials/facebook.svg";
 import { ButtonStyled } from "../../styles/Button.styled";

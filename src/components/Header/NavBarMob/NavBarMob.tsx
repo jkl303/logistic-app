@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ReactComponent as InstIcon } from "../../../icons/socials/instagtam.svg";
 import { ReactComponent as TwitterIcon } from "../../../icons/socials/twitter.svg";
 import { ReactComponent as FBIcon } from "../../../icons/socials/facebook.svg";
-import { ReactComponent as InIcon } from "../../../icons/socials/in.svg";
+import { ReactComponent as InIcon } from "../../../icons/socials/linkedIn.svg";
 import { ReactComponent as MenuIcon } from "../../../icons/common/menuIcon.svg";
 import { ReactComponent as CrossIcon } from "../../../icons/common/cross.svg";
 

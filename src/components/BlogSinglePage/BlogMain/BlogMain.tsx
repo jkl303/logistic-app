@@ -4,7 +4,7 @@ import cargoBlogSingle from "../../../images/others/cargoBlogSingle.jpg";
 import { ReactComponent as InstIcon } from "../../../icons/socials/instagtam.svg";
 import { ReactComponent as TwitterIcon } from "../../../icons/socials/twitter.svg";
 import { ReactComponent as FBIcon } from "../../../icons/socials/facebook.svg";
-import { ReactComponent as InIcon } from "../../../icons/socials/in.svg";
+import { ReactComponent as InIcon } from "../../../icons/socials/linkedIn.svg";
 
 import { ContainerStyled } from "../../../styles/Container.styled";
 import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";

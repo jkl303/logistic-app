@@ -3,7 +3,7 @@ import { ReactComponent as DropdownIndicator } from "../../../icons/common/dropd
 import { ReactComponent as InstIcon } from "../../../icons/socials/instagtam.svg";
 import { ReactComponent as TwitterIcon } from "../../../icons/socials/twitter.svg";
 import { ReactComponent as FBIcon } from "../../../icons/socials/facebook.svg";
-import { ReactComponent as InIcon } from "../../../icons/socials/in.svg";
+import { ReactComponent as InIcon } from "../../../icons/socials/linkedIn.svg";
 
 import {
   NavBarStyled,
