@@ -70,7 +70,7 @@ const App = () => {
           <Route path="/our-team" element={<Team />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/notfound" element={<NotFound />} />
         </Route>
       </Routes>
       <GlobalStyle />
