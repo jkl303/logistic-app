@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const NavBarMobStyled = styled.div`
   position: relative;
