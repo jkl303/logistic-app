@@ -3,5 +3,5 @@ publish = "build"
 
 [[redirects]]
 from = "/*"
-to = "/index.html/notfound"
+to = "/index.html"
 status = 200
