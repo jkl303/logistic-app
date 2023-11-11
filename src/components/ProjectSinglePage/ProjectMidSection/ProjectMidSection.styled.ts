@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ProjectMidSectionStyled = styled.section``;
 
