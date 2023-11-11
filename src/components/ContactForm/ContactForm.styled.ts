@@ -1,12 +1,11 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../styles/mediaQueries";
 
-export const ContactFormSectionStyled = styled.section`
+export const ContactSectionStyled = styled.section`
   padding-bottom: 50px;
 
   > div {
-    padding: 100px;
     text-align: center;
-    background-color: var(--primaryDark);
 
     h2 {
       margin: 12px 0 3px;
@@ -18,10 +17,24 @@ export const ContactFormSectionStyled = styled.section`
   }
 `;
 
+export const ContactSectionWrapper = styled.div`
+  max-width: 954px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
+  background-color: var(--primaryDark);
+  ${mediaQueries("tablet")`padding: 100px 60px;`}
+  ${mediaQueries("mobile")`padding: 50px 20px;`}
+`;
+
 export const IconsListStyled = styled.ul`
   display: flex;
-  margin: 40px 22px;
+  margin: 40px 0;
+  padding: 0 40px;
   justify-content: space-between;
+  ${mediaQueries(
+    "mobile",
+  )`flex-direction: column; align-items: center; row-gap: 20px;`}
 
   li {
     display: flex;
@@ -49,7 +62,7 @@ export const ContactFormStyled = styled.form`
   row-gap: 30px;
 
   input {
-    width: 365px;
+    width: 48%;
     height: 60px;
     padding: 0 30px;
     border: 1px solid #e0e0e0;
@@ -57,6 +70,7 @@ export const ContactFormStyled = styled.form`
 
     font-size: 20px;
     color: #fff;
+    ${mediaQueries("mobile")`width: 100%;`}
 
     ::placeholder {
       font-size: 18px;

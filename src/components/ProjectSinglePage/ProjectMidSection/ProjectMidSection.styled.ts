@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ProjectMidSectionStyled = styled.section``;
 
@@ -19,6 +20,7 @@ export const BenefitsListStyled = styled.ul`
     }
 
     p {
+      flex-shrink: 10;
       font-family: var(--primaryFont);
       font-size: 20px;
       color: var(--title);

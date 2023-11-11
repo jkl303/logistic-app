@@ -19,7 +19,7 @@ export const Companies: FC<{ dark?: boolean }> = ({
                 <img
                   src={img}
                   alt={name}
-                  width="300px"
+                  width="100%"
                   height="234px"
                 />
                 <div>

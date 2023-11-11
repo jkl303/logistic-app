@@ -1,24 +1,34 @@
 import styled from "styled-components";
 import cargoTeam from "../../images/TeamPage/cargoTeam.png";
+import { mediaQueries } from "../../styles/mediaQueries";
 
 export const WhyChooseUsStyled = styled.section`
-  padding: 168px 0 118px;
+  padding-bottom: 0;
   background-image: url(${cargoTeam});
-  background-position: 175px 100px;
+  background-position: 12.5% 120px;
   background-repeat: no-repeat;
+  ${mediaQueries("tablet")`background-position: 0 120px;`}
+  ${mediaQueries("mobile")`background-image: none;`}
+
+  > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 `;
 
 export const FrontImgStyled = styled.div`
-  position: absolute;
-  bottom: -10px;
-  left: 276px;
-  padding: 28px 0 0 28px;
+  margin-left: auto;
+  padding: 28px;
   background-color: #fff;
+  ${mediaQueries("tablet")`display: none;`}
 `;
 
 export const WhyChooseUsTextStyled = styled.div`
-  width: 560px;
-  margin-left: auto;
+  max-width: 560px;
+  padding: 68px 32px;
+  background-color: #fff;
+  ${mediaQueries("mobile")`padding: 0;`}
 
   h2 {
     margin: 15px 0 12px;
@@ -33,18 +43,18 @@ export const WhyChooseUsLineStyled = styled.div`
 
 export const TeamFeaturesStyled = styled.div`
   display: flex;
-  padding-right: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 
-  div {
+  > div {
+    max-width: 230px;
+
     h2 {
       margin: 11px 0 12px;
 
       font-size: 25px;
       font-weight: 500;
-    }
-
-    :first-child {
-      margin-right: 83px;
     }
   }
 `;

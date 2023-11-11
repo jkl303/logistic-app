@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ReviewsStyled = styled.section<{
   darkBG?: boolean;
@@ -23,6 +24,7 @@ export const ReviewsUpperStyled = styled.div`
 
 export const ButtonsStyled = styled.div`
   align-self: flex-end;
+  ${mediaQueries("tablet")`display: none;`}
 
   button {
     width: 45px;
@@ -59,12 +61,14 @@ export const ReviewsListStyled = styled.ul<{
   transition: transform 300ms ease-in-out;
   ${({ position }) =>
     position === "right" && "transform: translateX(-50%);"};
+  ${mediaQueries("tablet")`flex-wrap: wrap;`}
 `;
 
 export const ReviewStyled = styled.li`
   min-width: 50%;
   padding: 62px 72px;
   background-color: var(--secondary);
+  ${mediaQueries("tablet")`padding: 20px;`}
 
   :nth-child(2n) {
     background-color: var(--primaryDark);

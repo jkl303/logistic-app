@@ -86,7 +86,7 @@ export const BlogMain: FC<{ category: string }> = ({
             cross-platform integration.
           </TextStyled>
           <SocialsStyled>
-            <ul data-aos="fade-right">
+            <ul>
               <li>
                 <a href="https://www.instagram.com/">
                   <InstIcon />
@@ -108,7 +108,7 @@ export const BlogMain: FC<{ category: string }> = ({
                 </a>
               </li>
             </ul>
-            <p data-aos="fade-left">
+            <p>
               Category :&nbsp;
               <Link to={`/blog/${category}`}>
                 {category}

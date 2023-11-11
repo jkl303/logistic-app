@@ -43,16 +43,12 @@ export const News: FC<{
             .slice(0, allOrNot)
             .map(({ title, img, date }) => {
               return (
-                <li
-                  key={date}
-                  data-aos="fade-left"
-                  data-aos-delay="100">
+                <li key={date}>
                   <ImgLinkStyled to={`/post/${title}`}>
                     <img
                       src={img}
                       alt={title}
                       width="456px"
-                      height="310px"
                     />
                     <div>
                       <p>Read more</p>

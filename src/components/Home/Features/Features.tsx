@@ -5,34 +5,28 @@ import { ReactComponent as Planet } from "../../../icons/yellow/planet.svg";
 import { ReactComponent as Headphones } from "../../../icons/yellow/headphones.svg";
 import { ReactComponent as Clock } from "../../../icons/yellow/clock.svg";
 import { ReactComponent as Coin } from "../../../icons/yellow/coin.svg";
-import plane from "../../../images/HomePage/plane.jpg";
 import { ContainerStyled } from "../../../styles/Container.styled";
 import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { SpanStyled } from "../../../styles/Span.styled";
 import { TextStyled } from "../../../styles/Text.styled";
 import {
+  BGImgStyled,
   FeatureTextStyled,
-  FeaturesIMGWrapper,
   FeaturesListStyled,
   FeaturesStyled,
+  PlaneSignStyled,
 } from "./Features.styled";
 
 export const Features = () => {
   return (
     <FeaturesStyled>
       <ContainerStyled width={1640}>
-        <FeaturesIMGWrapper>
-          <img
-            src={plane}
-            alt="Plane"
-            width="929px"
-            height="610px"
-          />
-          <div data-aos="flip-down">
+        <BGImgStyled>
+          <PlaneSignStyled data-aos="flip-down">
             <PlanePale />
             <p>Moving your products across borders</p>
-          </div>
-        </FeaturesIMGWrapper>
+          </PlaneSignStyled>
+        </BGImgStyled>
         <FeatureTextStyled>
           <SpanStyled>Why Choose</SpanStyled>
           <SectionTitleStyled>
@@ -44,7 +38,7 @@ export const Features = () => {
             thinking to further the overall value
             proposition.
           </TextStyled>
-          <FeaturesListStyled data-aos="fade-left">
+          <FeaturesListStyled>
             <li>
               <Box />
               <h3>Safe Package</h3>

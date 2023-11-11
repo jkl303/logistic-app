@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const TeamStyled = styled.section<{
   all?: boolean;
@@ -18,13 +19,18 @@ export const TeamTitleStyled = styled.div`
 
 export const TeamListStyled = styled.ul`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 40px;
+  justify-content: center;
+  gap: 40px 54px;
 
   > li {
     position: relative;
     background-color: var(--primaryDark);
+
+    img {
+      ${mediaQueries("mobile")`width: 280px;
+    height: 328px;`}
+    }
 
     div {
       padding: 42px 34px 20px;
@@ -51,8 +57,8 @@ export const TeamSocialsStyled = styled.ul`
   bottom: 80px;
   right: 0;
   padding: 20px 17px;
-  gap: 25px;
   align-items: center;
+  gap: 25px;
   background: linear-gradient(
     94deg,
     #ffb629 -1.21%,

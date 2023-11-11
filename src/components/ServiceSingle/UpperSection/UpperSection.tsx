@@ -3,22 +3,18 @@ import shipServiceSingle from "../../../images/ServiceSinglePage/shipServiceSing
 import { ReactComponent as Ship } from "../../../icons/common/ship.svg";
 
 import { ContainerStyled } from "../../../styles/Container.styled";
-import {
-  ServiceTitleStyled,
-  UpperSectionStyled,
-} from "./UpperSection.styled";
+import { ServiceTitleStyled } from "./UpperSection.styled";
 import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { TextStyled } from "../../../styles/Text.styled";
 
 export const UpperSection = () => {
   return (
-    <UpperSectionStyled>
+    <section>
       <ContainerStyled>
         <img
           src={shipServiceSingle}
           alt="Ship"
           width="100%"
-          height="510px"
         />
         <ServiceTitleStyled>
           <Ship />
@@ -60,6 +56,6 @@ export const UpperSection = () => {
           expected.
         </TextStyled>
       </ContainerStyled>
-    </UpperSectionStyled>
+    </section>
   );
 };

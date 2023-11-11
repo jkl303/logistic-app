@@ -9,12 +9,16 @@ import {
   HeaderStyled,
   UpperSectionStyled,
 } from "./Header.styled";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
+import { NavBarMob } from "./NavBarMob/NavBarMob";
 
 export const Header = () => {
+  const width = useWindowWidth();
+
   return (
     <UpperSectionStyled>
-      <ContainerStyled>
-        <HeaderStyled>
+      <HeaderStyled>
+        <ContainerStyled>
           <Link to="/">
             <img
               src="https://assets.website-files.com/63a43a1633ad3e2a969a6958/63cf9bc5db063a81fc859659_transitflow-logo.svg"
@@ -26,27 +30,32 @@ export const Header = () => {
             <li>
               <ClockIcon />
               <div>
-                <p>Mon - Sat 9.00 - 18.00 Sunday Closed</p>
+                <p>Mon - Sat 9.00 - 18.00</p>
+                <p>Sunday Closed</p>
               </div>
             </li>
             <li>
               <LetterIcon />
               <div>
                 <p>Email</p>
-                <a href="mailto:contact@logistics.com">contact@logistics.com</a>
+                <a href="mailto:contact@logistics.com">
+                  contact@logistics.com
+                </a>
               </div>
             </li>
             <li>
               <PhoneIcon />
               <div>
                 <p>Call Us</p>
-                <a href="tel:00112365489">(00) 112 365 489</a>
+                <a href="tel:00112365489">
+                  (00) 112 365 489
+                </a>
               </div>
             </li>
           </ContactsStyled>
-        </HeaderStyled>
-      </ContainerStyled>
-      <NavBar />
+        </ContainerStyled>
+      </HeaderStyled>
+      {width > 1199 ? <NavBar /> : <NavBarMob />}
     </UpperSectionStyled>
   );
 };

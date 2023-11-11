@@ -23,10 +23,10 @@ export const LinkAnimatedStyled = styled.a<LinkStylesProps>`
 
   span {
     position: absolute;
-    width: 100%;
-    z-index: 1;
     top: 50%;
     left: 50%;
+    width: 100%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     transition: color 200ms ease;
 

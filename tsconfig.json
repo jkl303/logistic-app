@@ -17,5 +17,8 @@
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/components/Header/NavBarMob/NavBarMob.styled.ts"
+  ]
 }

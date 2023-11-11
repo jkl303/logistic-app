@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import shipWide from "../../../images/HomePage/shipWide.jpg";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const HeroHomeStyled = styled.section`
+  position: relative;
+  margin-top: -78px;
   padding: 0;
   background-color: var(--primaryDark);
   background-image: url(${shipWide});
   background-size: cover;
   background-position: center;
+  ${mediaQueries("tablet")`margin-top: -408px;`}
 `;
 
 export const HeroHomeContentStyled = styled.div`
-  width: 571px;
+  max-width: 571px;
   padding: 225px 0 250px;
   color: white;
 
@@ -26,5 +30,6 @@ export const HeroHomeContentStyled = styled.div`
 
     font-size: 60px;
     font-weight: 700;
+    ${mediaQueries("mobile")`font-size: 50px;`}
   }
 `;

@@ -1,12 +1,16 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const HeroBlogStyled = styled.section<{
   img: string;
 }>`
+  position: relative;
+  margin-top: -78px;
   background-color: var(--primaryDark);
   background-image: url(${(props) => props.img});
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
+  ${mediaQueries("tablet")`margin-top: -408px;`}
 `;
 
 export const HeroBlogContentStyled = styled.div`
@@ -19,6 +23,7 @@ export const HeroBlogContentStyled = styled.div`
 
     font-size: 60px;
     font-weight: 700;
+    ${mediaQueries("mobile")`font-size: 50px;`}
   }
 `;
 

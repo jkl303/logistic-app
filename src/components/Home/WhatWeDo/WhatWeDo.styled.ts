@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const WhatWeDoStyled = styled.div`
   display: flex;
-  padding: 120px 0;
+  padding: 100px 0;
   justify-content: space-between;
+  ${mediaQueries("tablet")`flex-wrap: wrap;`}
 `;
 
 export const TitleStyled = styled.div`
@@ -14,45 +16,60 @@ export const TitleStyled = styled.div`
 
 export const ServicesStyled = styled.ul`
   display: flex;
+  margin-top: 60px;
   flex-wrap: wrap;
-  gap: 83px 70px;
   justify-content: flex-end;
+  gap: 70px 83px;
+  ${mediaQueries("tablet")`gap: 60px 0;
+  justify-content: space-between;`}
 
   li {
     display: flex;
     align-items: flex-start;
+  }
+`;
 
-    div {
-      position: relative;
-      margin-left: 40px;
-      max-width: 277px;
+export const ServiceImgWrapper = styled.div`
+  width: 75px;
 
-      a {
-        transition: color 250ms ease;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
 
-        font-family: var(--primaryFont);
-        font-size: 25px;
-        font-weight: 400;
-        color: var(--title);
+export const ServiceTextStyled = styled.div`
+  position: relative;
+  flex-shrink: 2;
+  max-width: 270px;
+  margin-left: 40px;
+  ${mediaQueries("tablet")`max-width: 220px;`}
+  ${mediaQueries("mobile")`max-width: none;`}
 
-        :hover,
-        :focus {
-          color: var(--primaryYellow);
-        }
-      }
+  a {
+    transition: color 250ms ease;
 
-      p {
-        margin-top: 13px;
-      }
+    font-family: var(--primaryFont);
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--title);
 
-      ::before {
-        content: "";
-        position: absolute;
-        left: -25px;
-        width: 1px;
-        height: 110px;
-        background-color: #d8d8d8;
-      }
+    :hover,
+    :focus {
+      color: var(--primaryYellow);
     }
+  }
+
+  p {
+    margin-top: 13px;
+  }
+
+  ::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    width: 1px;
+    height: 90%;
+    background-color: #d8d8d8;
   }
 `;

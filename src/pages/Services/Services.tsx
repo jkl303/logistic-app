@@ -13,8 +13,8 @@ const Services = () => {
         title="Our Logistics Service"
         img={heroServices}
       />
-      <HowWeWorks />
       <ServicesList />
+      <HowWeWorks />
       <Reviews />
       <Stats />
     </>

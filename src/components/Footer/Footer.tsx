@@ -10,10 +10,9 @@ import {
   FooterFormStyled,
   FooterPagesStyled,
   FooterStyled,
+  FooterTextStyled,
   LowerFooterStyled,
-  MidFooterStyled,
-  UpperFooterStyled,
-  UpperFooterWrapper,
+  UpperFooterBGStyled,
 } from "./Footer.styled";
 import { ContainerStyled } from "../../styles/Container.styled";
 import { useState } from "react";
@@ -31,8 +30,9 @@ export const Footer = () => {
 
   return (
     <FooterStyled>
-      <UpperFooterWrapper>
-        <UpperFooterStyled>
+      <UpperFooterBGStyled />
+      <ContainerStyled>
+        <FooterContactsStyled>
           <Link to="/">
             <img
               src="https://assets.website-files.com/63a43a1633ad3e2a969a6958/63cf9bc5db063a81fc859659_transitflow-logo.svg"
@@ -40,13 +40,8 @@ export const Footer = () => {
               alt="Logistics Logo"
             />
           </Link>
-          <h2>Pages</h2>
-          <h2>Subscribe</h2>
-        </UpperFooterStyled>
-      </UpperFooterWrapper>
-      <ContainerStyled>
-        <MidFooterStyled>
-          <FooterContactsStyled data-aos="fade-right">
+
+          <FooterTextStyled>
             <p>
               Leverage agile frameworks to provide a robust
               synopsis for strategy collaborative thinking
@@ -70,9 +65,12 @@ export const Footer = () => {
                 </a>
               </div>
             </div>
-          </FooterContactsStyled>
+          </FooterTextStyled>
+        </FooterContactsStyled>
 
-          <FooterPagesStyled>
+        <FooterPagesStyled>
+          <h2>Pages</h2>
+          <ul>
             <li>
               <Link to="/about-us">About Us</Link>
             </li>
@@ -88,39 +86,39 @@ export const Footer = () => {
             <li>
               <Link to="/contact-us">Contact</Link>
             </li>
-          </FooterPagesStyled>
+          </ul>
+        </FooterPagesStyled>
 
-          <FooterFormStyled
-            onSubmit={handleSubmit}
-            data-aos="fade-left">
-            <input
-              type="email"
-              placeholder="Email here*"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-            />
-            <ButtonStyled type="submit">
-              {submitted ? "Submited" : "Send Now"}
-            </ButtonStyled>
-            <ul>
-              <li>
-                <a href="https://www.linkedin.com/in/vladyslav-zoz-15a8ba1a8/">
-                  <InIcon />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/">
-                  <TwitterIcon />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/">
-                  <FBIcon />
-                </a>
-              </li>
-            </ul>
-          </FooterFormStyled>
-        </MidFooterStyled>
+        <FooterFormStyled onSubmit={handleSubmit}>
+          <h2>Subscribe</h2>
+          <input
+            type="email"
+            placeholder="Email here*"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          />
+          <ButtonStyled type="submit">
+            {submitted ? "Submited" : "Send Now"}
+          </ButtonStyled>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/vladyslav-zoz-15a8ba1a8/">
+                <InIcon />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/">
+                <TwitterIcon />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/">
+                <FBIcon />
+              </a>
+            </li>
+          </ul>
+        </FooterFormStyled>
       </ContainerStyled>
+
       <LowerFooterStyled>
         <ContainerStyled>
           <p>

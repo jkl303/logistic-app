@@ -1,25 +1,32 @@
 import styled from "styled-components";
 import driverAbout from "../../../images/AboutPage/driverAbout.jpg";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const FAQStyled = styled.section`
   padding: 125px 0;
-  background-color: #f4f4f4;
+  background-color: var(--secondary);
   background-image: url(${driverAbout});
   background-position: right;
   background-repeat: no-repeat;
+  ${mediaQueries("tablet")`background-image: none;`}
 
   > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 `;
 
 export const FAQTextStyled = styled.div`
-  width: 681px;
+  width: 60%;
+  padding: 0 30px 20px 0;
+  background-color: var(--secondary);
+  ${mediaQueries("tablet")`width: 100%;`}
 
   > h2 {
     width: 310px;
     margin: 15px 0 50px;
+    ${mediaQueries("tablet")`width: 100%;`}
   }
 `;
 
@@ -57,24 +64,27 @@ export const QuestionStyled = styled.li<{
   }
 
   p {
-    width: 569px;
+    width: 76%;
     max-height: 0;
     opacity: 0;
     transition: max-height 300ms linear,
       opacity 300ms linear, padding-top 300ms linear;
     ${({ visible }) =>
       visible &&
-      "max-height: 100px; opacity: 1;padding-top: 18px;"};
+      "max-height: 100px;opacity: 1;padding-top: 18px;@media screen and (max-width: 767px) {max-height: 300px;}"};
+    ${mediaQueries("tablet")`width: 100%;`}
   }
+  ${mediaQueries("tablet")`width: 100%;`}
 `;
 
 export const FAQContactStyled = styled.div`
-  width: 448px;
-  max-height: 368px;
   align-self: center;
+  width: 448px;
+  height: 368px;
   padding: 52px 62px;
   color: #fff;
   background-color: var(--primaryDark);
+  ${mediaQueries("tablet")`width: 100%;`}
 
   h3 {
     margin: 23px 0 21px;
@@ -88,8 +98,8 @@ export const FAQContactStyled = styled.div`
 export const FAQPhoneStyled = styled.div`
   display: flex;
   margin-bottom: 26px;
-  gap: 14px;
   align-items: center;
+  gap: 14px;
 
   p,
   a {

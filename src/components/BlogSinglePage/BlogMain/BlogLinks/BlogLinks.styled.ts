@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../../styles/mediaQueries";
 
 export const BlogLinksStyled = styled.div`
   width: 424px;
+  ${mediaQueries("tablet")`width: 100%; margin-top: 36px;`}
 
   h2 {
     font-size: 22px;
@@ -14,6 +16,7 @@ export const CategoriesStyled = styled.div`
   margin-bottom: 46px;
   padding: 46px 42px;
   background-color: var(--secondary);
+  ${mediaQueries("mobile")`padding: 30px;`}
 
   ul {
     margin-top: 30px;
@@ -52,6 +55,7 @@ export const HelpStyled = styled.div`
   margin-bottom: 46px;
   padding: 46px 42px;
   background-color: var(--secondary);
+  ${mediaQueries("mobile")`padding: 30px;`}
 
   p {
     margin: 12px 0 30px;
@@ -64,6 +68,7 @@ export const ContactStyled = styled.div`
   gap: 24px;
   padding: 35px 43px;
   background-color: var(--primaryDark);
+  ${mediaQueries("mobile")`padding: 30px;`}
 
   p,
   a {

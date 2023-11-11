@@ -31,7 +31,7 @@ export const HowWeWorks = () => {
           <GoodnessesListStyled>
             {goodnesses.map(({ title, svg, text }) => {
               return (
-                <li>
+                <li key={title}>
                   <img
                     src={require(`../../icons/common/${svg}.svg`)}
                     alt={title}

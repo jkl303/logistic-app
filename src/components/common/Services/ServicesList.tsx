@@ -25,7 +25,7 @@ export const ServicesList = () => {
         <ServicesListStyled>
           {services.map(({ svg, title, text }) => {
             return (
-              <li key={svg}>
+              <li key={title}>
                 <img
                   src={require(`../../../icons/common/${svg}.svg`)}
                   alt={title}

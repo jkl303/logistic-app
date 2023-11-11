@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ServicesStyled = styled.div`
   padding: 120px 0;
@@ -18,12 +19,16 @@ export const ServicesListStyled = styled.ul`
   flex-wrap: wrap;
   row-gap: 53px;
   justify-content: space-between;
+  ${mediaQueries("tablet")`justify-content: space-evenly;`}
 
   li {
-    width: 350px;
     display: flex;
+    width: 350px;
     flex-direction: column;
     align-items: flex-start;
+    ${mediaQueries("tablet")`width: 300px;`}
+    ${mediaQueries("mobile")`width: 100%;
+    align-items: center;`}
 
     a {
       margin: 22px 0 13px;

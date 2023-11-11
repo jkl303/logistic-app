@@ -26,26 +26,24 @@ export const Projects: FC<{ all?: boolean }> = ({
           </SectionTitleStyled>
         )}
         <ProjectsListStyled>
-          {renderedProjects.map(
-            ({ img, customer, category }) => {
-              return (
-                <li key={customer}>
-                  <Link to={`/project/${customer}`}>
-                    <img
-                      src={img}
-                      alt={customer}
-                      width="386px"
-                      height="352px"
-                      loading="lazy"
-                    />
-                    <div>
-                      <SeeMoreIcon />
-                    </div>
-                  </Link>
-                </li>
-              );
-            },
-          )}
+          {renderedProjects.map(({ img, customer }) => {
+            return (
+              <li key={customer}>
+                <Link to={`/project/${customer}`}>
+                  <img
+                    src={img}
+                    alt={customer}
+                    width="380px"
+                    height="352px"
+                    loading="lazy"
+                  />
+                  <div>
+                    <SeeMoreIcon />
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ProjectsListStyled>
       </ContainerStyled>
     </ProjectsStyled>

@@ -1,18 +1,18 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const CompaniesListStyled = styled.ul<{
   dark?: boolean;
 }>`
   display: flex;
+  ${mediaQueries("tablet")`flex-wrap: wrap;`}
 
   li {
     position: relative;
     border: 1px solid var(--text);
     background-color: transparent;
-
-    :not(:last-child) {
-      border-right: none;
-    }
+    ${mediaQueries("tablet")`width: 50%;`}
+    ${mediaQueries("mobile")`width: 100%;`}
 
     img {
       opacity: 0;
@@ -33,11 +33,11 @@ export const CompaniesListStyled = styled.ul<{
     div {
       position: absolute;
       display: flex;
-      top: 0;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       height: 100%;
+      top: 0;
+      align-items: center;
+      justify-content: center;
       color: ${(props) =>
         props.dark ? "#fff" : "var(--primaryDark)"};
       ${(props) =>

@@ -53,7 +53,7 @@ export const BlogLinks = () => {
           width={148}
         />
       </HelpStyled>
-      <ContactStyled data-aos="fade-left">
+      <ContactStyled>
         <h2>Get In Touch</h2>
         <div>
           <p>Need help?</p>

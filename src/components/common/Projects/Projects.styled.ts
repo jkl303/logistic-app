@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ProjectsStyled = styled.section`
   h2 {
@@ -10,7 +11,8 @@ export const ProjectsListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 30px;
+  gap: 30px;
+  ${mediaQueries("tablet")`justify-content: space-evenly;`}
 
   a {
     position: relative;
@@ -22,6 +24,11 @@ export const ProjectsListStyled = styled.ul`
       div {
         opacity: 1;
       }
+    }
+
+    img {
+      ${mediaQueries("tablet")`width: 280px;
+      height: 260px;`}
     }
 
     div {
@@ -37,6 +44,10 @@ export const ProjectsListStyled = styled.ul`
       opacity: 0;
       background-color: #1c1f35e8;
       transition: opacity 250ms linear;
+
+      ${mediaQueries(
+        "tablet",
+      )`width: 230px; height: 210px;`}
     }
   }
 `;

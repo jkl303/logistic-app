@@ -53,7 +53,7 @@ export const About = () => {
           <FrontImgStyled data-aos="fade-left">
             <img
               src={writing}
-              alt="Plane"
+              alt="Writing"
               width="272px"
               height="195px"
               loading="lazy"
@@ -66,18 +66,18 @@ export const About = () => {
             height="415px"
             loading="lazy"
           />
-          <StatsStyled>
-            {stats.slice(1, 3).map(({ number, text }) => {
-              return (
-                <li key={number}>
-                  <span>{number}</span>
-                  <CubeYellowStyled />
-                  <p>{text}</p>
-                </li>
-              );
-            })}
-          </StatsStyled>
         </AboutContentStyled>
+        <StatsStyled>
+          {stats.slice(1, 3).map(({ number, text }) => {
+            return (
+              <li key={number}>
+                <span>{number}</span>
+                <CubeYellowStyled />
+                <p>{text}</p>
+              </li>
+            );
+          })}
+        </StatsStyled>
       </ContainerStyled>
     </AboutStyled>
   );

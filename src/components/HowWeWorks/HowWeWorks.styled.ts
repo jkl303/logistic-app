@@ -1,13 +1,21 @@
 import styled from "styled-components";
 import loaderServices from "../../images/ServicesPage/loaderServices.jpg";
+import { mediaQueries } from "../../styles/mediaQueries";
 
 export const HowWeWorksStyled = styled.section`
-  padding-bottom: 150px;
   background-color: var(--secondary);
   background-image: url(${loaderServices});
-  background-position: 210px 220px;
+  background-position: 8% 214px;
   background-repeat: no-repeat;
   text-align: center;
+  ${mediaQueries("tablet")`background-position: 0 214px;`}
+  ${mediaQueries("mobile")`background-image: none;`}
+
+  > div > div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 
   h2 {
     margin: 15px 0 35px;
@@ -15,20 +23,20 @@ export const HowWeWorksStyled = styled.section`
 `;
 
 export const FrontImgStyled = styled.div`
-  position: absolute;
-  bottom: -36px;
-  left: 276px;
-  padding: 28px 0 0 28px;
+  padding: 28px;
   background-color: var(--secondary);
+  ${mediaQueries("tablet")`display: none;`}
 `;
 
 export const GoodnessesListStyled = styled.ul`
-  margin-left: auto;
-  width: 550px;
-  padding-top: 50px;
+  padding: 54px;
+  padding-right: 0;
+  background-color: var(--secondary);
+  ${mediaQueries("mobile")`padding-left: 0;`}
 
   li {
     display: flex;
+    max-width: 550px;
     align-items: flex-start;
     text-align: start;
 
@@ -43,7 +51,7 @@ export const GoodnessesListStyled = styled.ul`
 
       h3 {
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 500;
         color: var(--title);
       }
 

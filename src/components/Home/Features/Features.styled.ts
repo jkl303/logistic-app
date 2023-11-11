@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import plane from "../../../images/HomePage/plane.jpg";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const FeaturesStyled = styled.section`
   position: relative;
@@ -8,46 +10,63 @@ export const FeaturesStyled = styled.section`
     var(--primaryDark) 50%,
     var(--secondary) 50%
   );
+  ${mediaQueries("tablet")`background: var(--secondary);`}
 
   > div {
     display: flex;
+    align-items: center;
+    gap: 53px;
+    ${mediaQueries("tablet")`flex-wrap: wrap;`}
   }
 `;
 
-export const FeaturesIMGWrapper = styled.div`
+export const BGImgStyled = styled.div`
   position: relative;
+  display: flex;
+  width: 56.7%;
+  height: 610px;
+  align-items: end;
+  justify-content: center;
+  background-image: url(${plane});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  ${mediaQueries("tablet")`width: 100%;`}
+  ${mediaQueries("mobile")`height: 460px;`}
+`;
 
-  div {
-    display: flex;
-    position: absolute;
-    left: 220px;
-    bottom: 0;
-    padding: 30px 33px;
-    width: 417px;
-    gap: 21px;
-    align-items: center;
-    background: linear-gradient(
-      94deg,
-      #ffb629 -1.21%,
-      #ffda56 58.66%,
-      #ffd7a6 116.84%
-    );
+export const PlaneSignStyled = styled.div`
+  display: flex;
+  width: 417px;
+  height: 139px;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  background: linear-gradient(
+    94deg,
+    #ffb629 -1.21%,
+    #ffda56 58.66%,
+    #ffd7a6 116.84%
+  );
+  ${mediaQueries("mobile")`width: 100%;`}
 
-    p {
-      width: 260px;
+  p {
+    width: 260px;
 
-      font-size: 25px;
-      color: var(--title);
-    }
+    font-size: 25px;
+    color: var(--title);
   }
 `;
 
 export const FeatureTextStyled = styled.div`
-  max-width: 710px;
-  padding: 58px 53px;
+  max-width: 593px;
 
   h2 {
     margin: 12px 0 18px;
+  }
+
+  p {
+    max-width: 486px;
   }
 `;
 

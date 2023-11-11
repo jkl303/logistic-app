@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../styles/mediaQueries";
 
 export const NotFoundSectionStyled = styled.section`
   text-align: center;
@@ -10,6 +11,8 @@ export const NotFoundSectionStyled = styled.section`
       font-style: normal;
       font-weight: 600;
       color: var(--title);
+      ${mediaQueries("tablet")`font-size: 250px;`}
+      ${mediaQueries("mobile")`font-size: 140px;`}
 
       span {
         color: var(--primaryYellow);

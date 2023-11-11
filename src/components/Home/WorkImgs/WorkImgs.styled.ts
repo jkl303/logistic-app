@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const WorkImgsStyled = styled.section`
   position: relative;
@@ -11,10 +12,10 @@ export const WorkImgsStyled = styled.section`
 
 export const BGStyled = styled.div`
   position: absolute;
-  bottom: 0;
   z-index: -1;
+  bottom: 0;
   width: 100%;
-  height: 500px;
+  height: 50%;
   background: linear-gradient(
     95deg,
     #ffb629 -1.19%,
@@ -25,11 +26,19 @@ export const BGStyled = styled.div`
 
 export const ImgList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin: 35px 0 65px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 18px;
 
   li {
     position: relative;
+
+    img {
+      ${mediaQueries("mobile")`
+      width: 280px;
+      height: 358px;`}
+    }
   }
 `;
 

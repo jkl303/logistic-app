@@ -45,7 +45,7 @@ export const Team: FC<{ all?: boolean }> = ({ all }) => {
                     <h3>{name}</h3>
                     <p>{jobTitle}</p>
                   </div>
-                  <TeamSocialsStyled data-aos="fade-left">
+                  <TeamSocialsStyled>
                     {socials.in && (
                       <li>
                         <a href="https://www.linkedin.com/">

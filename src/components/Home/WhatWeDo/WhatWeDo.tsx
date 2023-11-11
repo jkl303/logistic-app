@@ -7,6 +7,8 @@ import { SpanStyled } from "../../../styles/Span.styled";
 import { SectionTitleStyled } from "../../../styles/SectionTitle.styled";
 import { TextStyled } from "../../../styles/Text.styled";
 import {
+  ServiceImgWrapper,
+  ServiceTextStyled,
   ServicesStyled,
   TitleStyled,
   WhatWeDoStyled,
@@ -29,16 +31,18 @@ export const WhatWeDo = () => {
               .map(({ svg, title, text }) => {
                 return (
                   <li key={svg}>
-                    <img
-                      src={require(`../../../icons/common/${svg}.svg`)}
-                      alt={title}
-                    />
-                    <div>
+                    <ServiceImgWrapper>
+                      <img
+                        src={require(`../../../icons/common/${svg}.svg`)}
+                        alt={title}
+                      />
+                    </ServiceImgWrapper>
+                    <ServiceTextStyled>
                       <Link to="/service-single">
                         {title}
                       </Link>
                       <TextStyled>{text}</TextStyled>
-                    </div>
+                    </ServiceTextStyled>
                   </li>
                 );
               })}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../../styles/mediaQueries";
 
 export const ContactStyled = styled.section`
   padding: 143px 0;
@@ -8,11 +9,14 @@ export const ContactStyled = styled.section`
 export const ContactContentStyled = styled.div`
   display: flex;
   margin-bottom: 70px;
+  flex-wrap: wrap;
   justify-content: space-between;
+  ${mediaQueries("tablet")`justify-content: space-evenly;`}
 `;
 
 export const ContactTextStyled = styled.div`
   width: 353px;
+  ${mediaQueries("mobile")`width:100%;`}
 
   h2 {
     margin: 13px 0 3px;
@@ -47,11 +51,13 @@ export const IconsListStyled = styled.ul`
 export const ContactFormStyled = styled.form`
   display: flex;
   position: relative;
+  width: 758px;
   padding-top: 42px;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 30px;
-  width: 758px;
+  ${mediaQueries("tablet")`width:300px;`}
+  ${mediaQueries("mobile")`width:100%;`}
 
   input {
     width: 365px;
@@ -62,6 +68,7 @@ export const ContactFormStyled = styled.form`
 
     font-size: 20px;
     color: #fff;
+    ${mediaQueries("tablet")`width:100%;`}
 
     ::placeholder {
       font-size: 18px;

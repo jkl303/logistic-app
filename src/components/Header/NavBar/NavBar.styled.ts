@@ -1,24 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const NavBarWrapper = styled.div`
-  position: absolute;
-  width: 100%;
+export const NavBarStyled = styled.div`
+  position: relative;
   z-index: 1;
   background-color: #09124240;
-`;
 
-export const NavBarStyled = styled.div`
-  display: flex;
-  height: 78px;
-  align-items: center;
+  > div {
+    display: flex;
+    height: 78px;
+    align-items: center;
+  }
 `;
 
 export const NavStyled = styled.nav`
   display: flex;
-
   gap: 60px;
-
   font-weight: 600;
   line-height: 1.35;
   color: #fff;
@@ -41,6 +38,8 @@ export const NavLinkStyled = styled(NavLink)`
   color: inherit;
   transition: border-color 250ms ease;
 
+  font-family: var(--secondaryFont);
+
   :hover,
   &.active {
     border-color: #fff;
@@ -55,6 +54,8 @@ export const PagesStyled = styled.div<{
 
   span {
     padding: 26px 0;
+
+    font-family: var(--secondaryFont);
 
     :hover {
       cursor: pointer;
@@ -100,7 +101,8 @@ export const PagesLinkStyled = styled(NavLink)`
 
 export const SocialsListStyled = styled.ul`
   display: flex;
-  margin: 0 auto 0 277px;
+  margin-left: auto;
+  margin-right: 50px;
   gap: 24px;
 
   a {
@@ -122,6 +124,7 @@ export const RequestLinkStyled = styled(Link)`
   background-color: #fff;
   transition: background-color 250ms ease;
 
+  font-family: var(--secondaryFont);
   font-weight: 600;
   line-height: 1.35;
   color: var(--title);
